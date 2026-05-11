@@ -1,0 +1,138 @@
+/* ============================================================
+   SGO – Design Tokens
+   Sistema de Gestión de Órdenes · El Deber
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* ── Colores base ── */
+  --color-white:        #ffffff;
+  --color-black:        #0a0a0f;
+
+  /* Grises */
+  --color-gray-50:      #f6f8f6;
+  --color-gray-100:     #edf1ed;
+  --color-gray-200:     #dde5dd;
+  --color-gray-300:     #c2d0c2;
+  --color-gray-400:     #8fa98f;
+  --color-gray-500:     #637863;
+  --color-gray-600:     #4a5c4a;
+  --color-gray-700:     #364436;
+  --color-gray-800:     #1f2e1f;
+  --color-gray-900:     #111a11;
+
+  /* Primario – Verde El Deber */
+  --color-primary-50:   #f0f7f0;
+  --color-primary-100:  #dceddc;
+  --color-primary-200:  #b8dbb8;
+  --color-primary-300:  #88c088;
+  --color-primary-400:  #559e55;
+  --color-primary-500:  #3a8a3a;
+  --color-primary-600:  #2d6a2d;
+  --color-primary-700:  #235223;
+  --color-primary-800:  #1a3d1a;
+  --color-primary-900:  #112811;
+
+  /* Semánticos */
+  --color-success-50:   #f0fdf4;
+  --color-success-500:  #22c55e;
+  --color-success-700:  #15803d;
+
+  --color-warning-50:   #fffbeb;
+  --color-warning-500:  #f59e0b;
+  --color-warning-700:  #b45309;
+
+  --color-error-50:     #fef2f2;
+  --color-error-500:    #ef4444;
+  --color-error-700:    #b91c1c;
+
+  /* ── Tokens semánticos (tema claro) ── */
+  --bg-base:            var(--color-gray-50);
+  --bg-surface:         var(--color-white);
+  --bg-surface-raised:  var(--color-white);
+  --bg-muted:           var(--color-gray-100);
+
+  --border-default:     var(--color-gray-200);
+  --border-muted:       var(--color-gray-100);
+  --border-focus:       var(--color-primary-400);
+
+  --text-primary:       var(--color-gray-900);
+  --text-secondary:     var(--color-gray-500);
+  --text-disabled:      var(--color-gray-400);
+  --text-inverse:       var(--color-white);
+  --text-on-primary:    var(--color-white);
+
+  --accent:             var(--color-primary-600);
+  --accent-hover:       var(--color-primary-700);
+  --accent-light:       var(--color-primary-50);
+  --accent-text:        var(--color-primary-600);
+
+  /* ── Tipografía ── */
+  --font-sans:          'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono:          'Fira Code', ui-monospace, monospace;
+
+  --text-xs:    0.75rem;    /* 12px */
+  --text-sm:    0.875rem;   /* 14px */
+  --text-base:  1rem;       /* 16px */
+  --text-lg:    1.125rem;   /* 18px */
+  --text-xl:    1.25rem;    /* 20px */
+  --text-2xl:   1.5rem;     /* 24px */
+  --text-3xl:   1.875rem;   /* 30px */
+  --text-4xl:   2.25rem;    /* 36px */
+
+  --font-light:    300;
+  --font-regular:  400;
+  --font-medium:   500;
+  --font-semibold: 600;
+  --font-bold:     700;
+
+  --leading-tight:  1.25;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.625;
+
+  --tracking-tight:  -0.02em;
+  --tracking-normal:  0;
+  --tracking-wide:    0.025em;
+  --tracking-wider:   0.05em;
+  --tracking-widest:  0.1em;
+
+  /* ── Espaciado ── */
+  --space-1:  0.25rem;
+  --space-2:  0.5rem;
+  --space-3:  0.75rem;
+  --space-4:  1rem;
+  --space-5:  1.25rem;
+  --space-6:  1.5rem;
+  --space-8:  2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+
+  /* ── Bordes ── */
+  --radius-sm:  0.25rem;
+  --radius-md:  0.5rem;
+  --radius-lg:  0.75rem;
+  --radius-xl:  1rem;
+  --radius-2xl: 1.5rem;
+  --radius-full: 9999px;
+
+  /* ── Sombras ── */
+  --shadow-xs:  0 1px 2px 0 rgba(0,0,0,.05);
+  --shadow-sm:  0 1px 3px 0 rgba(0,0,0,.08), 0 1px 2px -1px rgba(0,0,0,.06);
+  --shadow-md:  0 4px 6px -1px rgba(0,0,0,.08), 0 2px 4px -2px rgba(0,0,0,.06);
+  --shadow-lg:  0 10px 15px -3px rgba(0,0,0,.08), 0 4px 6px -4px rgba(0,0,0,.06);
+  --shadow-xl:  0 20px 25px -5px rgba(0,0,0,.08), 0 8px 10px -6px rgba(0,0,0,.06);
+
+  /* ── Transiciones ── */
+  --transition-fast:   150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow:   350ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* ── Sidebar ── */
+  --sidebar-width:         260px;
+  --sidebar-collapsed-width: 72px;
+  --sidebar-bg:            var(--color-white);
+  --sidebar-border:        var(--color-gray-200);
+}

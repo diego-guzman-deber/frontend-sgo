@@ -1,0 +1,261 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  padding: var(--space-5) var(--space-6);
+}
+
+/* ── Cabecera ── */
+.pageHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.pageTitle {
+  font-size: var(--text-2xl);
+  font-weight: var(--font-bold);
+  color: var(--text-primary);
+  letter-spacing: var(--tracking-tight);
+  margin: 0 0 var(--space-1);
+}
+
+.pageSubtitle {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.btnNuevo {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-2) var(--space-4);
+  background: var(--accent);
+  color: var(--color-white);
+  border: none;
+  border-radius: var(--radius-lg);
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+.btnNuevo:hover {
+  background: var(--accent-hover);
+  box-shadow: 0 4px 12px rgba(45,106,45,0.3);
+}
+
+/* ── Tabla wrapper ── */
+.tableWrapper {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--text-sm);
+}
+
+/* ── Encabezados ── */
+.th {
+  padding: var(--space-3) var(--space-4);
+  text-align: left;
+  font-size: 0.72rem;
+  font-weight: var(--font-semibold);
+  color: var(--text-secondary);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  background: var(--color-gray-50);
+  border-bottom: 1px solid var(--border-default);
+  white-space: nowrap;
+  line-height: 1.3;
+}
+.thNum { text-align: right; }
+
+/* ── Filas ── */
+.tr {
+  transition: background-color var(--transition-fast);
+}
+.tr:not(:last-child) td {
+  border-bottom: 1px solid var(--border-muted);
+}
+.tr:hover {
+  background: var(--color-gray-50);
+}
+
+.td {
+  padding: var(--space-3) var(--space-4);
+  color: var(--text-primary);
+  vertical-align: middle;
+}
+.tdNum {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  color: var(--text-secondary);
+  font-size: var(--text-sm);
+}
+
+/* ── Celda Empresa ── */
+.empresaCell {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.empresaName {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-weight: var(--font-medium);
+  color: var(--text-primary);
+  font-size: var(--text-sm);
+}
+.fechas {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+.fechaStart {
+  font-size: 0.7rem;
+  font-weight: var(--font-semibold);
+  color: #d97706;
+  background: #fef3c7;
+  padding: 1px 6px;
+  border-radius: var(--radius-sm);
+}
+.fechaEnd {
+  font-size: 0.7rem;
+  font-weight: var(--font-semibold);
+  color: #d97706;
+  background: #fef3c7;
+  padding: 1px 6px;
+  border-radius: var(--radius-sm);
+}
+.clienteId {
+  font-size: 0.7rem;
+  color: var(--text-disabled);
+}
+.contacto {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+/* ── Saldo bar ── */
+.saldoCell {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 110px;
+}
+.saldoAmount {
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+  color: var(--text-primary);
+  font-variant-numeric: tabular-nums;
+}
+.progressTrack {
+  height: 6px;
+  background: var(--color-gray-100);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+.progressFill {
+  height: 100%;
+  border-radius: var(--radius-full);
+  transition: width var(--transition-normal);
+}
+.saldoPct {
+  font-size: 0.68rem;
+  font-weight: var(--font-medium);
+}
+
+/* ── Badges de estado ── */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 10px;
+  border-radius: var(--radius-full);
+  font-size: 0.72rem;
+  font-weight: var(--font-semibold);
+  white-space: nowrap;
+}
+.badgeActivo   { background: #dcfce7; color: #15803d; }
+.badgeVencido  { background: #fee2e2; color: #b91c1c; }
+.badgePendiente{ background: #fef9c3; color: #92400e; }
+
+/* ── Acciones ── */
+.actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+.actionBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: var(--radius-md);
+  border: none;
+  background: transparent;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+.actionBtn:hover {
+  background: var(--color-gray-100);
+  color: var(--text-primary);
+}
+.actionDelete:hover {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+/* ── Paginación ── */
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-3) var(--space-5);
+  border-top: 1px solid var(--border-muted);
+  background: var(--color-gray-50);
+}
+.paginationInfo {
+  font-size: var(--text-xs);
+  color: var(--text-secondary);
+}
+.paginationControls {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+.pageBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-default);
+  background: var(--bg-surface);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+.pageBtn:hover:not(:disabled) {
+  background: var(--color-gray-100);
+  color: var(--text-primary);
+}
+.pageBtn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+.pageLabel {
+  font-size: var(--text-xs);
+  color: var(--text-secondary);
+}

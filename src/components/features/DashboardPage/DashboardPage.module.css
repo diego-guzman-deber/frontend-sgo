@@ -1,0 +1,94 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  padding: var(--space-5) var(--space-6);
+  min-height: 100%;
+}
+
+/* ── Barra de filtros ── */
+.filterBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-xl);
+  padding: var(--space-3) var(--space-5);
+  box-shadow: var(--shadow-xs);
+}
+
+.filterLabel {
+  font-size: var(--text-base);
+  font-weight: var(--font-semibold);
+  color: var(--text-primary);
+}
+
+.filterActions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+/* ── Grupo de período ── */
+.periodGroup {
+  display: flex;
+  background: var(--bg-muted);
+  border-radius: var(--radius-lg);
+  padding: 2px;
+  gap: 2px;
+}
+
+.periodBtn {
+  padding: var(--space-1) var(--space-4);
+  border-radius: calc(var(--radius-lg) - 2px);
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  color: var(--text-secondary);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition:
+    background-color var(--transition-fast),
+    color var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.periodBtn:hover:not(.periodActive) {
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.periodActive {
+  background: var(--bg-surface);
+  color: var(--text-primary);
+  font-weight: var(--font-semibold);
+  box-shadow: var(--shadow-xs);
+}
+
+/* ── Botón calendario ── */
+.calBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: var(--radius-lg);
+  background: var(--bg-muted);
+  border: 1px solid var(--border-default);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.calBtn:hover {
+  background: var(--color-gray-200);
+  color: var(--text-primary);
+}
+
+/* ── Secciones ── */
+.sections {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}

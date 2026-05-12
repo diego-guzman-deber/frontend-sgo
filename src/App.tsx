@@ -75,7 +75,7 @@ function App() {
       onNavigate={(id) => setRoute(id as Route)}
     >
       {renderPage(route)}
-    </DashboardLayout>
+     </DashboardLayout>
   );
 }
 

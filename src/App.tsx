@@ -62,7 +62,7 @@ function getActiveId(route: Route): string {
 }
 
 function App() {
-  const [isAuthenticated, setIsAuthenticated] = useState(true);
+  const [isAuthenticated, _setIsAuthenticated] = useState(true);
   const [route, setRoute] = useState<Route>('dashboard');
 
   if (!isAuthenticated) {

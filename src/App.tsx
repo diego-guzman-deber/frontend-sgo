@@ -4,6 +4,8 @@ import { DashboardPage }   from './components/features/DashboardPage';
 import { ContratoPage }    from './components/features/ContratoPage';
 import { PedidosPage }     from './components/features/PedidosPage';
 import { OrdenPage }       from './components/features/OrdenPage';
+import { ProductoPage }    from './components/features/ProductoPage';
+import { KpiPage }         from './components/features/KpiPage';
 import { DashboardLayout } from './components/layouts/DashboardLayout';
 import './styles/global.css';
 
@@ -26,7 +28,11 @@ type Route =
   | 'soporte-tickets'
   | 'soporte-faq'
   | 'producto'
-  | 'kpi';
+  | 'producto-list'
+  | 'producto-nuevo'
+  | 'kpi'
+  | 'kpi-list'
+  | 'kpi-nuevo';
 
 /** Resuelve el componente para cada ruta */
 function renderPage(route: Route) {
@@ -46,6 +52,16 @@ function renderPage(route: Route) {
     case 'orden-hist':
       return <OrdenPage />;
 
+    case 'producto':
+    case 'producto-list':
+    case 'producto-nuevo':
+      return <ProductoPage />;
+
+    case 'kpi':
+    case 'kpi-list':
+    case 'kpi-nuevo':
+      return <KpiPage />;
+
     case 'dashboard':
     default:
       return <DashboardPage />;
@@ -58,6 +74,7 @@ function getActiveId(route: Route): string {
   if (route.startsWith('pedidos'))  return 'pedidos';
   if (route.startsWith('orden'))    return 'orden';
   if (route.startsWith('soporte'))  return 'soporte';
+  if (route.startsWith('producto')) return 'producto';
   return route;
 }
 

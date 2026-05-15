@@ -72,11 +72,19 @@ const NAV_ITEMS: NavItem[] = [
     id:    'producto',
     label: 'Producto',
     icon:  <IconProduct />,
+    children: [
+      { id: 'producto-list',  label: 'Listado' },
+      { id: 'producto-nuevo', label: 'Nuevo producto' },
+    ],
   },
   {
     id:    'kpi',
     label: 'KPI',
     icon:  <IconKpi />,
+    children: [
+      { id: 'kpi-list',  label: 'Listado' },
+      { id: 'kpi-nuevo', label: 'Nuevo KPI' },
+    ],
   },
 ];
 
